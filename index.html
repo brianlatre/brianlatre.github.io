@@ -3,25 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>
-      Brian Latre — Full‑Stack Developer (FastAPI · Vue · Nuxt · SQL · Docker)
-    </title>
-    <meta
-      name="description"
-      content="Portfolio profesional de Brian Latre — Desarrollador Full‑Stack (Python/FastAPI, Vue 3/Nuxt, SQL Server, Docker, CodeIgniter). Proyectos, experiencia y contacto."
-    />
+    <title>Brian Latre — Full‑Stack Developer (FastAPI · Vue · Nuxt · SQL · Docker)</title>
+    <meta name="description" content="Portfolio profesional de Brian Latre — Desarrollador Full‑Stack (Python/FastAPI, Vue 3/Nuxt, SQL Server, Docker, CodeIgniter). Proyectos, experiencia y contacto."/>
     <meta name="color-scheme" content="light dark" />
 
     <!-- Pre-set theme to avoid FOUC -->
     <script>
-      (function () {
+      (function(){
         try {
-          var stored = localStorage.getItem("theme");
-          var prefersDark =
-            window.matchMedia &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches;
-          var theme = stored ? stored : prefersDark ? "dark" : "light";
-          if (theme === "dark") document.documentElement.classList.add("dark");
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var theme = stored ? stored : (prefersDark ? 'dark' : 'light');
+          if (theme === 'dark') document.documentElement.classList.add('dark');
           document.documentElement.dataset.theme = theme;
         } catch (e) {}
       })();
@@ -29,92 +22,54 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Brian Latre — Full‑Stack Developer" />
-    <meta
-      property="og:description"
-      content="Python/FastAPI · Vue/Nuxt · SQL Server · Docker · PHP/CodeIgniter"
-    />
+    <meta property="og:description" content="Python/FastAPI · Vue/Nuxt · SQL Server · Docker · PHP/CodeIgniter" />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://avatars.githubusercontent.com/u/000000?v=4"
-    />
+    <meta property="og:image" content="https://github.com/brianlatre.png" />
 
     <!-- Inter font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Tailwind (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        darkMode: "class",
+      tailwind.config = { 
+        darkMode: 'class',
         theme: {
           extend: {
-            fontFamily: { sans: ["Inter", "system-ui", "sans-serif"] },
+            fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif']},
             colors: {
               primary: {
-                50: "#eef6ff",
-                100: "#d9ecff",
-                200: "#bcdcfe",
-                300: "#90c5fd",
-                400: "#61a7fb",
-                500: "#3a86f7",
-                600: "#2566d9",
-                700: "#1d50ac",
-                800: "#1d4589",
-                900: "#1e3a6d",
-              },
+                50:'#eef6ff',100:'#d9ecff',200:'#bcdcfe',300:'#90c5fd',400:'#61a7fb',
+                500:'#3a86f7',600:'#2566d9',700:'#1d50ac',800:'#1d4589',900:'#1e3a6d'
+              }
             },
             boxShadow: {
-              soft: "0 10px 30px -10px rgba(2, 6, 23, 0.25)",
-            },
-          },
-        },
-      };
+              soft: '0 10px 30px -10px rgba(2, 6, 23, 0.25)'
+            }
+          }
+        }
+      }
     </script>
 
     <!-- Favicon (simple bolt SVG) -->
-    <link
-      rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M13 2L3 14h7l-1 8 11-13h-7l0-7z'/%3E%3C/svg%3E"
-    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M13 2L3 14h7l-1 8 11-13h-7l0-7z'/%3E%3C/svg%3E">
 
     <style>
-      html,
-      body {
-        height: 100%;
-      }
-      .link-underline {
-        background-image: linear-gradient(currentColor, currentColor);
-        background-size: 0% 2px;
-        background-repeat: no-repeat;
-        background-position: left bottom;
-        transition: background-size 0.2s ease;
-      }
-      .link-underline:hover {
-        background-size: 100% 2px;
-      }
+      html, body { height: 100%; }
+      .link-underline { background-image: linear-gradient(currentColor,currentColor); background-size: 0% 2px; background-repeat: no-repeat; background-position: left bottom; transition: background-size .2s ease; }
+      .link-underline:hover { background-size: 100% 2px; }
     </style>
   </head>
 
-  <body
-    class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100"
-  >
+  <body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100">
     <!-- Header -->
-    <header
-      class="sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/80 backdrop-blur bg-white/70 dark:bg-slate-950/50"
-    >
+    <header class="sticky top-0 z-50 border-b border-slate-200/50 dark:border-slate-800/80 backdrop-blur bg-white/70 dark:bg-slate-950/50">
       <div class="mx-auto max-w-6xl px-4">
         <div class="flex items-center justify-between py-3">
           <a href="#hero" class="flex items-center gap-3 font-semibold">
-            <span
-              class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary-600 text-white shadow-soft"
-              >BL</span
-            >
+            <span class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary-600 text-white shadow-soft">BL</span>
             <span>Brian Latre</span>
           </a>
           <nav class="hidden md:flex items-center gap-6 text-sm">
@@ -124,43 +79,12 @@
             <a href="#contacto" class="link-underline">Contacto</a>
           </nav>
           <div class="flex items-center gap-2">
-            <a
-              href="https://github.com/USERNAME"
-              target="_blank"
-              rel="noopener"
-              class="rounded-xl border border-slate-200/70 dark:border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-900"
-              >GitHub</a
-            >
-            <button
-              id="themeToggle"
-              aria-label="Cambiar tema"
-              class="rounded-xl border border-slate-200/70 dark:border-slate-800 p-2 hover:bg-slate-100 dark:hover:bg-slate-900"
-            >
+            <a href="https://github.com/brianlatre" target="_blank" rel="noopener" class="rounded-xl border border-slate-200/70 dark:border-slate-800 px-3 py-1.5 text-sm hover:bg-slate-100 dark:hover:bg-slate-900">GitHub</a>
+            <button id="themeToggle" aria-label="Cambiar tema" class="rounded-xl border border-slate-200/70 dark:border-slate-800 p-2 hover:bg-slate-100 dark:hover:bg-slate-900">
               <!-- moon icon -->
-              <svg
-                id="icon-moon"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="h-5 w-5 hidden"
-              >
-                <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
-              </svg>
+              <svg id="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 hidden"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
               <!-- sun icon -->
-              <svg
-                id="icon-sun"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="h-5 w-5 hidden"
-              >
-                <path d="M12 18a6 6 0 100-12 6 6 0 000 12z" />
-                <path
-                  fill-rule="evenodd"
-                  d="M12 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm0 17a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zm10-8a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM7 12a1 1 0 01-1 1H4a1 1 0 110-2h2a1 1 0 011 1zm12.364-6.364a1 1 0 010 1.414L18.95 7.464a1 1 0 11-1.414-1.414l.414-.414a1 1 0 011.414 0zM6.464 17.536a1 1 0 010 1.414l-.414.414A1 1 0 114.636 18.95l.414-.414a1 1 0 011.414 0zM18.95 18.95a1 1 0 01-1.414 0l-.414-.414A1 1 0 1118.536 17.12l.414.414a1 1 0 010 1.415zM5.05 5.05A1 1 0 106.464 6.464l-.414.414A1 1 0 104.636 5.05l.414-.414z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+              <svg id="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5 hidden"><path d="M12 18a6 6 0 100-12 6 6 0 000 12z"/><path fill-rule="evenodd" d="M12 2a1 1 0 011 1v2a1 1 0 11-2 0V3a1 1 0 011-1zm0 17a1 1 0 011 1v2a1 1 0 11-2 0v-2a1 1 0 011-1zm10-8a1 1 0 01-1 1h-2a1 1 0 110-2h2a1 1 0 011 1zM7 12a1 1 0 01-1 1H4a1 1 0 110-2h2a1 1 0 011 1zm12.364-6.364a1 1 0 010 1.414L18.95 7.464a1 1 0 11-1.414-1.414l.414-.414a1 1 0 011.414 0zM6.464 17.536a1 1 0 010 1.414l-.414.414A1 1 0 114.636 18.95l.414-.414a1 1 0 011.414 0zM18.95 18.95a1 1 0 01-1.414 0l-.414-.414A1 1 0 1118.536 17.12l.414.414a1 1 0 010 1.415zM5.05 5.05A1 1 0 106.464 6.464l-.414.414A1 1 0 104.636 5.05l.414-.414z" clip-rule="evenodd"/></svg>
             </button>
           </div>
         </div>
@@ -169,10 +93,7 @@
 
     <!-- Hero -->
     <section id="hero" class="relative">
-      <div
-        aria-hidden="true"
-        class="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/60 via-transparent to-transparent dark:from-primary-900/10"
-      ></div>
+      <div aria-hidden="true" class="pointer-events-none absolute inset-0 bg-gradient-to-b from-primary-50/60 via-transparent to-transparent dark:from-primary-900/10"></div>
       <div class="mx-auto max-w-6xl px-4 py-16 md:py-24">
         <div class="grid gap-10 md:grid-cols-2 md:items-center">
           <div>
@@ -181,77 +102,29 @@
               <span class="text-primary-600">Python · FastAPI</span> y
               <span class="text-primary-600">Vue 3 · Nuxt</span>
             </h1>
-            <p
-              class="mt-4 text-base md:text-lg text-slate-600 dark:text-slate-300"
-            >
+            <p class="mt-4 text-base md:text-lg text-slate-600 dark:text-slate-300">
               Construyo APIs escalables y frontends con UX cuidada. Experto en
-              <strong>FastAPI</strong>, <strong>Vue/Nuxt</strong>,
-              <strong>SQL Server</strong>, <strong>Docker</strong> y
-              <strong>PHP/CodeIgniter</strong>. Enfoque product-first,
+              <strong>FastAPI</strong>, <strong>Vue/Nuxt</strong>, <strong>SQL Server</strong>,
+              <strong>Docker</strong> y <strong>PHP/CodeIgniter</strong>. Enfoque product-first,
               documentación, y CI/CD.
             </p>
             <div class="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href="#proyectos"
-                class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-4 py-2.5 font-semibold text-white shadow-soft hover:translate-y-[-1px] transition"
-                >Ver proyectos →</a
-              >
-              <a
-                href="#contacto"
-                class="inline-flex items-center gap-2 rounded-xl border border-slate-200/70 dark:border-slate-800 px-4 py-2.5 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900"
-                >Contactar</a
-              >
+              <a href="#proyectos" class="inline-flex items-center gap-2 rounded-xl bg-primary-600 px-4 py-2.5 font-semibold text-white shadow-soft hover:translate-y-[-1px] transition">Ver proyectos →</a>
+              <a href="#contacto" class="inline-flex items-center gap-2 rounded-xl border border-slate-200/70 dark:border-slate-800 px-4 py-2.5 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900">Contactar</a>
             </div>
-            <div
-              class="mt-6 flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400"
-            >
-              <span
-                class="rounded-lg border border-slate-200/70 dark:border-slate-800 px-2 py-1"
-                >España</span
-              >
-              <span
-                class="rounded-lg border border-slate-200/70 dark:border-slate-800 px-2 py-1"
-                >Presencial</span
-              >
+            <div class="mt-6 flex flex-wrap gap-2 text-xs text-slate-500 dark:text-slate-400">
+              <span class="rounded-lg border border-slate-200/70 dark:border-slate-800 px-2 py-1">España</span>
+              <span class="rounded-lg border border-slate-200/70 dark:border-slate-800 px-2 py-1">Presencial</span>
             </div>
           </div>
           <div class="relative">
             <div class="rounded-3xl p-0 border-0 bg-transparent">
               <ul class="grid grid-cols-2 gap-3 text-sm">
-                <li
-                  class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"
-                >
-                  <b>Backend:</b>
-                  <span class="opacity-80"
-                    >Python 3.11, FastAPI, Pydantic, SQLAlchemy</span
-                  >
-                </li>
-                <li
-                  class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"
-                >
-                  <b>Frontend:</b>
-                  <span class="opacity-80"
-                    >Vue 3, Nuxt 3, Vuetify, Tailwind</span
-                  >
-                </li>
-                <li
-                  class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"
-                >
-                  <b>Bases de datos:</b>
-                  <span class="opacity-80">SQL Server, Postgres, MySQL</span>
-                </li>
-                <li
-                  class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"
-                >
-                  <b>DevOps:</b>
-                  <span class="opacity-80">Docker, Nginx, CI/CD</span>
-                </li>
-                <li
-                  class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100 col-span-2"
-                >
-                  <b>PHP:</b>
-                  <span class="opacity-80">CodeIgniter, PHP-FPM</span>
-                </li>
+                <li class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"><b>Backend:</b> <span class="opacity-80">Python 3.11, FastAPI, Pydantic, SQLAlchemy</span></li>
+                <li class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"><b>Frontend:</b> <span class="opacity-80">Vue 3, Nuxt 3, Vuetify, Tailwind</span></li>
+                <li class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"><b>Bases de datos:</b> <span class="opacity-80">SQL Server, Postgres, MySQL</span></li>
+                <li class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100"><b>DevOps:</b> <span class="opacity-80">Docker, Nginx, CI/CD</span></li>
+                <li class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-4 bg-white/80 dark:bg-slate-900/40 text-slate-800 dark:text-slate-100 col-span-2"><b>PHP:</b> <span class="opacity-80">CodeIgniter, PHP-FPM</span></li>
               </ul>
             </div>
           </div>
@@ -263,42 +136,21 @@
     <section id="proyectos" class="mx-auto max-w-6xl px-4 py-12 md:py-16">
       <div class="flex items-end justify-between gap-6">
         <h2 class="text-2xl md:text-3xl font-bold">Proyectos destacados</h2>
-        <a
-          class="text-sm link-underline"
-          href="https://github.com/USERNAME?tab=repositories"
-          target="_blank"
-          rel="noopener"
-          >Ver todos en GitHub</a
-        >
+        <a class="text-sm link-underline" href="https://github.com/brianlatre?tab=repositories" target="_blank" rel="noopener">Ver todos en GitHub</a>
       </div>
       <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <!-- Card: Unlive News -->
-        <article
-          class="group rounded-2xl border border-slate-200/70 dark:border-slate-800 p-5 hover:shadow-soft transition bg-white/80 dark:bg-slate-900/40"
-        >
+        <article class="group rounded-2xl border border-slate-200/70 dark:border-slate-800 p-5 hover:shadow-soft transition bg-white/80 dark:bg-slate-900/40">
           <h3 class="font-semibold text-lg">Unlive News</h3>
-          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">
-            Agregador de noticias con reescritura AI, Bulma/Tailwind y SEO. Cron
-            + scraping + feeds.
-          </p>
+          <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Agregador de noticias con reescritura AI, Bulma/Tailwind y SEO. Cron + scraping + feeds.</p>
           <ul class="mt-3 flex flex-wrap gap-2 text-xs">
-            <li class="rounded-lg bg-slate-100 dark:bg-slate-800/70 px-2 py-1">
-              PHP
-            </li>
-            <li class="rounded-lg bg-slate-100 dark:bg-slate-800/70 px-2 py-1">
-              CodeIgniter
-            </li>
-            <li class="rounded-lg bg-slate-100 dark:bg-slate-800/70 px-2 py-1">
-              MySQL
-            </li>
+            <li class="rounded-lg bg-slate-100 dark:bg-slate-800/70 px-2 py-1">PHP</li>
+            <li class="rounded-lg bg-slate-100 dark:bg-slate-800/70 px-2 py-1">CodeIgniter</li>
+            <li class="rounded-lg bg-slate-100 dark:bg-slate-800/70 px-2 py-1">MySQL</li>
           </ul>
           <div class="mt-4 flex gap-3 text-sm">
-            <a class="link-underline" href="#" target="_blank" rel="noopener"
-              >Código</a
-            >
-            <a class="link-underline" href="#" target="_blank" rel="noopener"
-              >Demo</a
-            >
+            <a class="link-underline" href="#" target="_blank" rel="noopener">Código</a>
+            <a class="link-underline" href="#" target="_blank" rel="noopener">Demo</a>
           </div>
         </article>
       </div>
@@ -307,34 +159,18 @@
     <!-- Experiencia -->
     <section id="experiencia" class="mx-auto max-w-6xl px-4 py-12 md:py-16">
       <h2 class="text-2xl md:text-3xl font-bold">Experiencia</h2>
-      <ol
-        class="mt-8 relative border-s border-slate-200/70 dark:border-slate-800"
-      >
+      <ol class="mt-8 relative border-s border-slate-200/70 dark:border-slate-800">
         <li class="ms-4">
-          <div
-            class="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-primary-600"
-          ></div>
-          <h3 class="text-lg font-semibold">
-            Full‑Stack Developer — Alumbra Energía
-          </h3>
-          <p class="text-sm text-slate-500">
-            2023 — Actualidad · España · Presencial
-          </p>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-            FastAPI + Vue/Nuxt, TPV, comparativas, facturas, multitenant,
-            Docker, SQL Server, CI/CD.
-          </p>
+          <div class="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-primary-600"></div>
+          <h3 class="text-lg font-semibold">Full‑Stack Developer — Alumbra Energía</h3>
+          <p class="text-sm text-slate-500">2023 — Actualidad · España · Presencial</p>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">FastAPI + Vue/Nuxt, TPV, comparativas, facturas, multitenant, Docker, SQL Server, CI/CD.</p>
         </li>
         <li class="ms-4 mt-6">
-          <div
-            class="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-primary-600"
-          ></div>
+          <div class="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full bg-primary-600"></div>
           <h3 class="text-lg font-semibold">Freelance — Side Projects</h3>
           <p class="text-sm text-slate-500">2019 — Actualidad · España</p>
-          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-            SaaS pequeños, dashboards, agregadores, bots, y sitios estáticos
-            optimizados para SEO.
-          </p>
+          <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">SaaS pequeños, dashboards, agregadores, bots, y sitios estáticos optimizados para SEO.</p>
         </li>
       </ol>
     </section>
@@ -343,83 +179,37 @@
     <section id="tecnologias" class="mx-auto max-w-6xl px-4 py-12 md:py-16">
       <h2 class="text-2xl md:text-3xl font-bold">Tecnologías</h2>
       <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 text-sm">
-        <div
-          class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40"
-        >
-          <h3 class="font-semibold text-primary-700 dark:text-primary-400">
-            Backend
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            Python 3.11, FastAPI, Pydantic, SQLAlchemy, Celery, JWT
-          </p>
+        <div class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40">
+          <h3 class="font-semibold text-primary-700 dark:text-primary-400">Backend</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Python 3.11, FastAPI, Pydantic, SQLAlchemy, Celery, JWT</p>
         </div>
-        <div
-          class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40"
-        >
-          <h3 class="font-semibold text-primary-700 dark:text-primary-400">
-            Frontend
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            Vue 3 (Composition API), Nuxt 3 (SSG), Vuetify 3, Tailwind
-          </p>
+        <div class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40">
+          <h3 class="font-semibold text-primary-700 dark:text-primary-400">Frontend</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Vue 3 (Composition API), Nuxt 3 (SSG), Vuetify 3, Tailwind</p>
         </div>
-        <div
-          class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40"
-        >
-          <h3 class="font-semibold text-primary-700 dark:text-primary-400">
-            DevOps
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            Docker, Nginx, GitHub Actions, Linux, WSL2
-          </p>
+        <div class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40">
+          <h3 class="font-semibold text-primary-700 dark:text-primary-400">DevOps</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">Docker, Nginx, GitHub Actions, Linux, WSL2</p>
         </div>
-        <div
-          class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40"
-        >
-          <h3 class="font-semibold text-primary-700 dark:text-primary-400">
-            Datos y DB
-          </h3>
-          <p class="mt-2 text-slate-600 dark:text-slate-300">
-            SQL Server, Postgres, MySQL, Redis, ORM
-          </p>
+        <div class="rounded-2xl border border-primary-200 dark:border-primary-700 p-5 bg-white/80 dark:bg-slate-900/40">
+          <h3 class="font-semibold text-primary-700 dark:text-primary-400">Datos y DB</h3>
+          <p class="mt-2 text-slate-600 dark:text-slate-300">SQL Server, Postgres, MySQL, Redis, ORM</p>
         </div>
       </div>
     </section>
 
     <!-- Contacto -->
     <section id="contacto" class="mx-auto max-w-6xl px-4 py-12 md:py-16">
-      <div
-        class="rounded-3xl border border-slate-200/70 dark:border-slate-800 p-8 bg-white/80 dark:bg-slate-900/40 shadow-soft"
-      >
-        <div
-          class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between"
-        >
+      <div class="rounded-3xl border border-slate-200/70 dark:border-slate-800 p-8 bg-white/80 dark:bg-slate-900/40 shadow-soft">
+        <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
           <div>
             <h2 class="text-2xl md:text-3xl font-bold">¿Hablamos?</h2>
-            <p class="mt-2 text-slate-600 dark:text-slate-300">
-              Disponible para oportunidades presenciales o freelance en España.
-            </p>
+            <p class="mt-2 text-slate-600 dark:text-slate-300">Disponible para oportunidades presenciales o freelance en España.</p>
           </div>
           <div class="flex flex-wrap gap-3">
-            <a
-              href="mailto:tuemail@dominio.com"
-              class="rounded-xl bg-primary-600 px-4 py-2.5 font-semibold text-white shadow-soft"
-              >Escríbeme</a
-            >
-            <a
-              href="https://www.linkedin.com/in/USERNAME"
-              target="_blank"
-              rel="noopener"
-              class="rounded-xl border border-slate-200/70 dark:border-slate-800 px-4 py-2.5 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900"
-              >LinkedIn</a
-            >
-            <a
-              href="https://github.com/USERNAME"
-              target="_blank"
-              rel="noopener"
-              class="rounded-xl border border-slate-200/70 dark:border-slate-800 px-4 py-2.5 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900"
-              >GitHub</a
-            >
+            <a href="mailto:brianlatre@gmail.com" class="rounded-xl bg-primary-600 px-4 py-2.5 font-semibold text-white shadow-soft">Escríbeme</a>
+            <a href="https://www.linkedin.com/in/brian-citoler-latre/" target="_blank" rel="noopener" class="rounded-xl border border-slate-200/70 dark:border-slate-800 px-4 py-2.5 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900">LinkedIn</a>
+            <a href="https://github.com/brianlatre" target="_blank" rel="noopener" class="rounded-xl border border-slate-200/70 dark:border-slate-800 px-4 py-2.5 font-semibold hover:bg-slate-100 dark:hover:bg-slate-900">GitHub</a>
           </div>
         </div>
       </div>
@@ -427,15 +217,9 @@
 
     <!-- Footer -->
     <footer class="border-t border-slate-200/50 dark:border-slate-800/80">
-      <div
-        class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-500 dark:text-slate-400"
-      >
-        <div
-          class="flex flex-col md:flex-row items-center justify-between gap-3"
-        >
-          <p>
-            © <span id="year"></span> Brian Latre. Hecho con HTML + Tailwind.
-          </p>
+      <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-500 dark:text-slate-400">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-3">
+          <p>© <span id="year"></span> Brian Latre. Hecho con HTML + Tailwind.</p>
           <div class="flex items-center gap-4">
             <a href="#" class="link-underline">CV (PDF)</a>
             <a href="#" class="link-underline">Política de privacidad</a>
@@ -446,30 +230,26 @@
 
     <script>
       // Year
-      document.getElementById("year").textContent = new Date().getFullYear();
+      document.getElementById('year').textContent = new Date().getFullYear();
 
       // Theme toggle + icon state
-      (function () {
-        const btn = document.getElementById("themeToggle");
-        const iconSun = document.getElementById("icon-sun");
-        const iconMoon = document.getElementById("icon-moon");
-        function apply(theme) {
-          const isDark = theme === "dark";
-          document.documentElement.classList.toggle("dark", isDark);
+      (function(){
+        const btn = document.getElementById('themeToggle');
+        const iconSun = document.getElementById('icon-sun');
+        const iconMoon = document.getElementById('icon-moon');
+        function apply(theme){
+          const isDark = theme === 'dark';
+          document.documentElement.classList.toggle('dark', isDark);
           document.documentElement.dataset.theme = theme;
-          try {
-            localStorage.setItem("theme", theme);
-          } catch (e) {}
+          try { localStorage.setItem('theme', theme); } catch(e) {}
           // icons
-          iconSun.classList.toggle("hidden", isDark);
-          iconMoon.classList.toggle("hidden", !isDark);
+          iconSun.classList.toggle('hidden', isDark);
+          iconMoon.classList.toggle('hidden', !isDark);
         }
         // init from dataset set in <head>
-        apply(document.documentElement.dataset.theme || "light");
-        btn.addEventListener("click", function () {
-          const next = document.documentElement.classList.contains("dark")
-            ? "light"
-            : "dark";
+        apply(document.documentElement.dataset.theme || 'light');
+        btn.addEventListener('click', function(){
+          const next = document.documentElement.classList.contains('dark') ? 'light' : 'dark';
           apply(next);
         });
       })();
